@@ -1,0 +1,123 @@
+##Exemplo PGP-APACHE-MYSQL Aprendido no BootCamp DIO
+===============================================
+docker-compose.yml
+===============================================
+
+version: "3.7"
+
+services:
+  web:
+    image: webdevops/php-apache:alpine-php7
+    ports:
+      - "4500:80"
+    volumes:
+      - /data/php/:/app
+
+    networks:
+      - minha-rede
+
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: "Caixa@123"
+      MYSQL_DATABASE: "Minions"
+    ports:
+      - "3306:3306"
+    volumes:
+      - /data/mysql-Minions:/var/lib/mysql
+
+    networks:
+      - minha-rede
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    environment:
+      MYSQL_ROOT_PASSWORD: "Senha123"
+    ports:
+      - "8080:80"
+    volumes:
+      - /data/php/admin/uploads.ini:/usr/local/etc/php/conf.d/php-phpmyadmin.ini
+
+    networks:
+      - minha-rede
+
+networks:
+   minha-rede:
+     driver: bridge
+
+=============================================================
+ uploads.ini
+=============================================================
+ 
+file_uploads = On
+memory_limit = 500M
+upload_max_filesize = 500M
+post_max_size = 500M
+max_execution_time = 600
+max_file_uploads = 50000
+max_execution_time = 5000
+max_input_time = 5000
+
+=============================================================
+index.php
+=============================================================
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Minions</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Minions</h1>
+    <?php
+
+// Configurações do banco de dados
+$host = "db";
+$username = "root";
+$password = "Caixa@123";
+$dbname = "Minions";
+
+    // Conexão com o banco de dados
+    $conn = mysqli_connect($host, $username, $password, $dbname);
+
+    // Verifica se a conexão foi estabelecida com sucesso
+    if (!$conn) {
+        die("Falha na conexão com o banco de dados: " . mysqli_connect_error());
+    }
+
+    // Consulta na tabela minions_name
+    $query = "SELECT nome, idade, nivel_maldade FROM minions_name";
+    $result = mysqli_query($conn, $query);
+
+    // Verifica se a consulta retornou resultados
+    if (mysqli_num_rows($result) > 0) {
+        echo '<table>';
+        echo '<tr><th>Nome</th><th>Idade</th><th>Nível de Maldade</th></tr>';
+
+        // Exibe os resultados
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo '<tr>';
+            echo '<td>' . $row['nome'] . '</td>';
+            echo '<td>' . $row['idade'] . '</td>';
+            echo '<td>' . $row['nivel_maldade'] . '</td>';
+            echo '</tr>';
+        }
+
+        echo '</table>';
+    } else {
+        echo 'Nenhum minion encontrado.';
+    }
+
+    // Fecha a conexão com o banco de dados
+    mysqli_close($conn);
+    ?>
+
+</html>
