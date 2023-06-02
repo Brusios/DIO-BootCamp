@@ -1,3 +1,4 @@
+package bruno.souza.primeirsemana;
 public class MinhaClasse {
   public static void main (String [] args){
     //System.out.print("Ola turma, sejam bem-vindos");
@@ -9,8 +10,8 @@ public class MinhaClasse {
 
     Double calcIMC = calcularIMC(altura, peso);
 
-    //String nomeCompleto = nomeClompeto(primeiroNome, segundoNome);
-    //System.out.println(nomeCompleto);
+    String nomeCompleto = nomeClompeto(primeiroNome, segundoNome);
+    System.out.println(nomeCompleto);
     System.out.println("Seu IMC: " + calcIMC);
   }
   public static String nomeClompeto (String primeiroNome, String segundoNome){
