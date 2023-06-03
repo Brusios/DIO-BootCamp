@@ -5,10 +5,10 @@ public class MinhaClasse {
   
     String primeiroNome = "Bruno";
     String segundoNome = "Gustavo";
-    Double altura = 1.75;
-    int peso = 92;
+    double altura = 1.74;
+    int peso = 106;
 
-    Double calcIMC = calcularIMC(altura, peso);
+    double calcIMC = calcularIMC(altura, peso);
 
     String nomeCompleto = nomeClompeto(primeiroNome, segundoNome);
     System.out.println(nomeCompleto);
@@ -18,7 +18,7 @@ public class MinhaClasse {
     return "Nome completo: " + primeiroNome.concat(" ").concat(segundoNome);
   }
 
-  public static Double calcularIMC (Double altura, int peso){
+  public static double calcularIMC (double altura, int peso){
     return (altura/peso)*2;
   }
 }
