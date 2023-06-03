@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "AboutMe",
+      "request": "launch",
+      "mainClass": "AboutMe",
+      "projectName": "meu-primeiro-projeto-jaca_116c2b5c"
+    },
+    {
+      "type": "java",
       "name": "Current File",
       "request": "launch",
       "mainClass": "${file}"
