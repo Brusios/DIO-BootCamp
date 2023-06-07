@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Ex4_NomeEIdade",
+      "request": "launch",
+      "mainClass": "bruno.souza.loops.Ex4_NomeEIdade",
+      "projectName": "meu-primeiro-projeto-jaca_116c2b5c"
+    },
+    {
+      "type": "java",
       "name": "Ex3_NomeEIdade",
       "request": "launch",
       "mainClass": "bruno.souza.loops.Ex3_NomeEIdade",
