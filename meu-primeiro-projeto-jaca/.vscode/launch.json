@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Ex2",
+      "request": "launch",
+      "mainClass": "bruno.souza.array.Ex2",
+      "projectName": "meu-primeiro-projeto-jaca_116c2b5c"
+    },
+    {
+      "type": "java",
       "name": "Ex1",
       "request": "launch",
       "mainClass": "bruno.souza.array.Ex1",
