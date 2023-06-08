@@ -8,6 +8,13 @@
       "type": "java",
       "name": "Ex1",
       "request": "launch",
+      "mainClass": "bruno.souza.metodos.aula2.Ex1",
+      "projectName": "meu-primeiro-projeto-jaca_116c2b5c"
+    },
+    {
+      "type": "java",
+      "name": "Ex1",
+      "request": "launch",
       "mainClass": "bruno.souza.metodos.Ex1",
       "projectName": "meu-primeiro-projeto-jaca_116c2b5c"
     },
