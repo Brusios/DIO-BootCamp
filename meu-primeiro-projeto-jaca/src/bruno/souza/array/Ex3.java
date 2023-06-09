@@ -4,7 +4,7 @@ import java.util.Random;
 public class Ex3 {
   public static void main(String[] args) {
     Random random = new Random();
-    int[] numerosAleatorios = new int[14];
+    int[] numerosAleatorios = new int[6];
 
     for (int i = 0; i < numerosAleatorios.length; i++) {
       int numero = random.nextInt(100);

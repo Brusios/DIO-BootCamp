@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Ex2 {
   public static void main(String[] args) {
     Scanner scan = new Scanner(System.in);
-    String[] consoantes = new String[6];
+    String[] consoantes = new String[5];
     int quantidadeConsoantes = 0;
     int count = 0;
 
@@ -33,7 +33,7 @@ public class Ex2 {
     }
 
     System.out.println("\nQuantidade de consoantes: " + quantidadeConsoantes);
-    System.out.println(consoantes.length);
+    System.out.println("Tamanho da array: " + consoantes.length);
 
   }
 }

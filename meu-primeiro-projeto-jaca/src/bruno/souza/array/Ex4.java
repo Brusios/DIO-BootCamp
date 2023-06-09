@@ -7,7 +7,7 @@ public class Ex4 {
   public static void main(String[] args) {
     Random random = new Random();
 
-    int[][] M = new int[4][4];
+    int[][] M = new int[4][2];
 
     for (int i = 0; i < M.length; i++) {
       for (int j = 0; j < M[i].length; j++) {

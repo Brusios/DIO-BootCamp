@@ -1,7 +1,7 @@
 public class SmarTv {
-  boolean ligada=false;
-  int canal =1;
-  int volume=25;
+  boolean ligada=true;
+  int canal =5;
+  int volume=20;
 
   public void ligar(){
     ligada=true;
@@ -32,6 +32,6 @@ public class SmarTv {
 
   public void mudarCanal(int novoCanal){
     canal = novoCanal;
-    System.out.println("Mudando o canal para: " + volume);
+    System.out.println("Mudando o canal para: " + canal);
   }
 }
