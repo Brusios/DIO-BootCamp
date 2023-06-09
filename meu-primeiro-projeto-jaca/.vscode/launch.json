@@ -6,6 +6,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "ExemploOrdenacaoList",
+      "request": "launch",
+      "mainClass": "bruno.souza.list.ExemploOrdenacaoList",
+      "projectName": "meu-primeiro-projeto-jaca_116c2b5c"
+    },
+    {
+      "type": "java",
+      "name": "ExemploList",
+      "request": "launch",
+      "mainClass": "bruno.souza.list.ExemploList",
+      "projectName": "meu-primeiro-projeto-jaca_116c2b5c"
+    },
+    {
+      "type": "java",
+      "name": "Collection",
+      "request": "launch",
+      "mainClass": "bruno.souza.list.Collection",
+      "projectName": "meu-primeiro-projeto-jaca_116c2b5c"
+    },
+    {
+      "type": "java",
       "name": "Ex1",
       "request": "launch",
       "mainClass": "bruno.souza.metodos.aula3.Ex1",
