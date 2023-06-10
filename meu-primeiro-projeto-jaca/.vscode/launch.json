@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "LancamentoDados",
+      "request": "launch",
+      "mainClass": "bruno.souza.map.LancamentoDados",
+      "projectName": "meu-primeiro-projeto-jaca_116c2b5c"
+    },
+    {
+      "type": "java",
       "name": "PopulacaoEstados",
       "request": "launch",
       "mainClass": "bruno.souza.map.PopulacaoEstados",
