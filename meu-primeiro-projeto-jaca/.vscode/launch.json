@@ -6,6 +6,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "PopulacaoEstados",
+      "request": "launch",
+      "mainClass": "bruno.souza.map.PopulacaoEstados",
+      "projectName": "meu-primeiro-projeto-jaca_116c2b5c"
+    },
+    {
+      "type": "java",
+      "name": "ClassificacaoCrime",
+      "request": "launch",
+      "mainClass": "bruno.souza.list.ClassificacaoCrime",
+      "projectName": "meu-primeiro-projeto-jaca_116c2b5c"
+    },
+    {
+      "type": "java",
       "name": "TemperaturasSemestrais",
       "request": "launch",
       "mainClass": "bruno.souza.list.TemperaturasSemestrais",
